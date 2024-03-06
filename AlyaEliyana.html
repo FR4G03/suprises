@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Miss You</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        #container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transform: scale(0.98); /* Add a slight scaling effect */
+        }
+
+        header {
+            background-color: #FF69B4; /* Pink background for a loving touch */
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            position: relative;
+            animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #FFFFFF;
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .heart-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .heart-icon:hover {
+            transform: scale(1.2);
+        }
+
+        #container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                #FF69B4,
+                #FF69B4 10px,
+                #FFC0CB 10px,
+                #FFC0CB 20px
+            );
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        main {
+            background-color: white;
+            color: #333;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #FF69B4;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        h2 {
+            color: #FF69B4;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            color: #5E98C7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Style for the video container */
+        #video-container {
+            display: none;
+            margin: 20px 0;
+        }
+
+        /* Style for the show video button */
+        #show-video-btn {
+            background-color: #FF69B4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>I Miss You</h1>
+            <div class="heart-icon">&#10084;</div>
+        </header>
+        <main>
+            <h2>Hi Nur Alya Eliyana!</h2>
+            <p>I wanted to take a moment to tell you that I really miss you. I cherish the memories we've made and look forward to creating more in the future.</p>
+            <p>Take care and stay happy!</p>
+			<p>Saja Je Try Try Buat Web HAHAHAHAHAHAHA <p>
+            <p>- Aiman Rasyid</p>
+            
+            <!-- Button to show the video -->
+            <button id="show-video-btn" onclick="toggleVideo()">Show Video</button>
+
+            <!-- Video container -->
+            <div id="video-container">
+                <video width="300" height="200" controls>
+                    <source src="C:\xampp\htdocs\AlyaEliyana.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </main>
+        <footer>
+            &copy; 2024 AimanRasyidSDNBHD. All rights reserved. | <a href="#" target="_blank">Privacy Policy</a>
+        </footer>
+    </div>
+
+    <script>
+        // Function to toggle the visibility of the video container
+        function toggleVideo() {
+            var videoContainer = document.getElementById("video-container");
+            videoContainer.style.display = (videoContainer.style.display === 'none' || videoContainer.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
